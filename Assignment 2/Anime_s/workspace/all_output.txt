@@ -1,0 +1,117 @@
+Assumptions:
+1. The genres and themes to be included in the dropdown menu are: Action, Adventure, Comedy, Drama, Fantasy, Horror, Mystery, Romance, Sci-Fi, Thriller.
+2. The anime recommendations will be fetched from the Kitsu API and will be based on the selected genre or theme.
+3. The criteria for recommending an anime based on a selected genre or theme is that the anime must be tagged with the selected genre or theme.
+
+The core files, classes, functions, and methods that will be necessary are:
+
+1. index.html: This is the main HTML file that will contain the structure of the web application.
+2. styles.css: This CSS file will contain all the styles for the web application.
+3. main.js: This JavaScript file will contain all the logic for fetching and displaying the anime recommendations.
+4. fetchAnimeData(): This function will fetch the anime data from the Kitsu API.
+5. filterAnimeData(): This function will filter the fetched anime data based on the selected genre or theme.
+6. displayAnimeData(): This function will display the filtered anime data on the web application.
+
+Now, let's write the code for each file.
+
+index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Anime Recommendations</h1>
+    </header>
+    <main>
+        <div class="dropdown">
+            <select id="genre">
+                <option value="">Select Genre</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="thriller">Thriller</option>
+            </select>
+        </div>
+        <div id="anime-list"></div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
+```
+
+styles.css
+```css
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.dropdown {
+    width: 200px;
+    margin: 20px auto;
+}
+
+#anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.anime-card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+```
+
+main.js
+```javascript
+document.getElementById('genre').addEventListener('change', function() {
+    fetchAnimeData(this.value);
+});
+
+function fetchAnimeData(genre) {
+    fetch(`https://kitsu.io/api/edge/anime?filter[genres]=${genre}`)
+        .then(response => response.json())
+        .then(data => {
+            const animeData = data.data;
+            displayAnimeData(animeData);
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function displayAnimeData(animeData) {
+    const animeList = document.getElementById('anime-list');
+    animeList.innerHTML = '';
+    animeData.forEach(anime => {
+        const animeCard = document.createElement('div');
+        animeCard.classList.add('anime-card');
+        animeCard.innerHTML = `
+            <h2>${anime.attributes.titles.en_jp}</h2>
+            <img src="${anime.attributes.posterImage.small}" alt="${anime.attributes.titles.en_jp}">
+            <p>${anime.attributes.synopsis}</p>
+        `;
+        animeList.appendChild(animeCard);
+    });
+}
+```

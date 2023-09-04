@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Recommendations</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="genres">Select genres:</label><br>
+        <input type="checkbox" id="action" name="genres" value="Action">
+        <label for="action">Action</label><br>
+        <!-- Add more genres here -->
+        <label for="themes">Select themes:</label><br>
+        <input type="checkbox" id="fantasy" name="themes" value="Fantasy">
+        <label for="fantasy">Fantasy</label><br>
+        <!-- Add more themes here -->
+        <input type="submit" value="Get Recommendations">
+    </form>
+    {% if animes %}
+        <h2>Recommended Animes:</h2>
+        <ul>
+            {% for anime in animes %}
+                <li>{{ anime.title }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

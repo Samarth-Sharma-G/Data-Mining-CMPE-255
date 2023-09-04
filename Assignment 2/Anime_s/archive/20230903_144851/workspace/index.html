@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Anime Recommendations</h1>
+    <div>
+        <label for="genre">Select a genre:</label>
+        <select id="genre"></select>
+    </div>
+    <div>
+        <label for="theme">Select a theme:</label>
+        <select id="theme"></select>
+    </div>
+    <button onclick="getRecommendations()">Get Recommendations</button>
+    <div id="top-rated"></div>
+    <div id="recommendations"></div>
+    <script src="main.js"></script>
+</body>
+</html>

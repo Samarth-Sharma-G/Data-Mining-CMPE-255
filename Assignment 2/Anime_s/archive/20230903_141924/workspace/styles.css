@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.anime-card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

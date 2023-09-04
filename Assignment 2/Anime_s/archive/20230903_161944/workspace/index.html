@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Anime Recommendations</h1>
+    <select id="genre">
+        <option value="">Select Genre</option>
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="horror">Horror</option>
+        <option value="mystery">Mystery</option>
+        <option value="romance">Romance</option>
+        <option value="sci-fi">Sci-Fi</option>
+    </select>
+    <button onclick="fetchAnimeRecommendations()">Get Recommendations</button>
+    <div id="recommendations"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>

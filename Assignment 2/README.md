@@ -1,4 +1,4 @@
-#Task: To showcase the power of integrating Vscode and generative ai
+# Task: To showcase the power of integrating Vscode and generative ai
 
 To integrate Vscode with a generative ai, i cloned gpt-engineer and followed the steps to setup the environment. 
 Once that was done, I added a prompt to create a static website for anime recommendation based on genre. Prompt can be found at Anime_s --> prompt.  

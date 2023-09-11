@@ -5,6 +5,7 @@ There are five simple steps in the Jadbio tool Workflow:
 3)	Analyze Data (Feature Selection)
 4)	Apply Model
 5)	Download Report
+
 I added a sleeping efficiency dataset, a regression problem where on the basis of various factors such as sleep hours, times awakened, exercise frequency, and deep sleep percentage the sleep efficiency is to be predicted which ranges from 1 to 10. The dataset can be found in the directory named ‘sleeping_efficiency.csv’.
 
 Jadbio being an AutoML tool provides a smooth process with no coding. Just upload the dataset, and look into the features if they are interpreted perfectly (categorical or numerical). Select the best performance or best interpretable model based on objectives. And then apply the model to the transformed data. 

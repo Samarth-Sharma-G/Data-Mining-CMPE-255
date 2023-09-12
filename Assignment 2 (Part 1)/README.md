@@ -1,4 +1,5 @@
-🎯Task: Create an end-to-end ML project using Jadbio (AutoML tool)
+# 🎯Task: Create an end-to-end ML project using Jadbio (AutoML tool)
+
 There are five simple steps in the Jadbio tool Workflow:
 1)	Add Dataset 
 2)	Transform Data 
@@ -6,7 +7,7 @@ There are five simple steps in the Jadbio tool Workflow:
 4)	Apply Model
 5)	Download Report
 
-I added a sleeping efficiency dataset, a regression problem where on the basis of various factors such as sleep hours, times awakened, exercise frequency, and deep sleep percentage the sleep efficiency is to be predicted which ranges from 1 to 10. The dataset can be found in the directory named ‘sleeping_efficiency.csv’.
+I added a sleeping efficiency dataset, with a regression problem, where on the basis of various factors such as sleep hours, times awakened, exercise frequency, and deep sleep percentage the sleep efficiency is to be predicted which ranges from 1 to 10. The dataset can be found in the directory named ‘sleeping_efficiency.csv’.
 
 Jadbio being an AutoML tool provides a smooth process with no coding. Just upload the dataset, and look into the features if they are interpreted perfectly (categorical or numerical). Select the best performance or best interpretable model based on objectives. And then apply the model to the transformed data. 
 Also, the visualization and report are provided by Jadbio itself, Take a look at the report ‘Sleeping_Efficiency_Jadbio.pdf’, it encapsulates the details.

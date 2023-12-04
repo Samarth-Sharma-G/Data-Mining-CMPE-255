@@ -1,4 +1,4 @@
-#Dimensionality_Reduction_Techniques
+# Dimensionality Reduction Techniques
 
 <a href='https://colab.research.google.com/drive/1lHPlLNmNhkVADIF_wGpOnVh7rZ87EvzA?usp=sharing'> Different Dimensionality Reduction Techniques </a>
 
